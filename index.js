@@ -18,14 +18,14 @@ function updateRollHistory() {
   rollHistoryEl.innerHTML = "";
   for (let i = 0; i < historyList.length; i++) {
     const listItem = document.createElement("li");
-    listItem.innerHTML = `Roll ${i + 1}: <span> ${getDiceFace(
+    listItem.innerHTML = `Roll ${i + 1}: <span>${getDiceFace(
       historyList[i]
     )}</span>`;
     rollHistoryEl.appendChild(listItem);
   }
 }
 
-function getDiceFace(rollDice) {
+function getDiceFace(rollResult) {
   switch (rollResult) {
     case 1:
       return "&#9856;";
